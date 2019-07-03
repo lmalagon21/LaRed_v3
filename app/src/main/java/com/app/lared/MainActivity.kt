@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Switch
 
 class MainActivity : AppCompatActivity() {
 
@@ -34,5 +35,6 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, uso_app_cliente :: class.java)
             startActivity(intent)
         }
+
     }
 }
