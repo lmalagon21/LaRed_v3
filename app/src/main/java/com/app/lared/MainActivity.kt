@@ -48,16 +48,57 @@ class MainActivity : AppCompatActivity() {
         val swN = findViewById<Switch>(R.id.es_negocio)
         val swPW = findViewById<Switch>(R.id.olvido_pwd)
 
-        swC?.setOnCheckedChangeListener { _, isChecked ->
-            swN.setChecked(!isChecked)
-            usoAppCliente.isEnabled = (true)
-            usoAppNegocio.isEnabled = (false)
-            usoAppCliente.visibility = (View.VISIBLE)
-            usoAppNegocio.visibility = (View.INVISIBLE)
+        swC?.setOnClickListener {
+            if (swC.isChecked) {
+                swN.isEnabled = (false)
+                usoAppCliente.isEnabled = (true)
+                usoAppNegocio.isEnabled = (false)
+                usoAppCliente.visibility = (View.VISIBLE)
+                usoAppNegocio.visibility = (View.INVISIBLE)
+            }  else {
+                swN.isEnabled = (true)
+                usoAppCliente.isEnabled = (false)
+                usoAppNegocio.isEnabled = (false)
+                }
+
+        }
+
+        swN?.setOnClickListener {
+            if (swN.isChecked) {
+                swC.isEnabled = (false)
+                usoAppCliente.isEnabled = (false)
+                usoAppNegocio.isEnabled = (true)
+                usoAppCliente.visibility = (View.INVISIBLE)
+                usoAppNegocio.visibility = (View.VISIBLE)
+            }  else {
+                swC.isEnabled = (true)
+                usoAppCliente.isEnabled = (false)
+                usoAppNegocio.isEnabled = (false)
+                }
+
+        }
+
+        swPW?.setOnClickListener {
+            if (swPW.isChecked) {
+                swC.isEnabled = (false)
+                swN.isEnabled = (false)
+                usoAppCliente.isEnabled = (false)
+                usoAppNegocio.isEnabled = (false)
+                swN.isChecked = (false)
+                swC.isChecked = (false)
+                val intent = Intent(this, olvido_password :: class.java)
+                startActivity(intent)
+            }  else {
+                swC.isEnabled = (true)
+                swN.isEnabled = (true)
+                swN.isChecked = (false)
+                swC.isChecked = (false)
+            }
+
         }
 
 
-        swN?.setOnCheckedChangeListener { _, isChecked ->
+        /*swN?.setOnCheckedChangeListener { _, isChecked ->
             swC.setChecked(!isChecked)
             usoAppNegocio.isEnabled = (true)
             usoAppCliente.isEnabled = (false)
@@ -71,7 +112,7 @@ class MainActivity : AppCompatActivity() {
             usoAppNegocio.isEnabled = (false)
             val intent = Intent(this, olvido_password :: class.java)
             startActivity(intent)
-        }
+        }*/
 
     }
 }
