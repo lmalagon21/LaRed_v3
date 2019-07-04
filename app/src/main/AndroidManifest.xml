@@ -9,6 +9,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".olvido_password">
+        </activity>
         <activity android:name=".transferir_puntos">
         </activity>
         <activity android:name=".buscar_promocion">

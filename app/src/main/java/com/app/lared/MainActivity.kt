@@ -46,9 +46,12 @@ class MainActivity : AppCompatActivity() {
         //b1.setOnClickListener()
         val swC = findViewById<Switch>(R.id.es_cliente)
         val swN = findViewById<Switch>(R.id.es_negocio)
+        val swPW = findViewById<Switch>(R.id.olvido_pwd)
 
         swC?.setOnCheckedChangeListener { _, isChecked ->
             swN.setChecked(!isChecked)
+            usoAppCliente.isEnabled = (true)
+            usoAppNegocio.isEnabled = (false)
             usoAppCliente.visibility = (View.VISIBLE)
             usoAppNegocio.visibility = (View.INVISIBLE)
         }
@@ -56,8 +59,18 @@ class MainActivity : AppCompatActivity() {
 
         swN?.setOnCheckedChangeListener { _, isChecked ->
             swC.setChecked(!isChecked)
+            usoAppNegocio.isEnabled = (true)
+            usoAppCliente.isEnabled = (false)
             usoAppNegocio.visibility = (View.VISIBLE)
             usoAppCliente.visibility = (View.INVISIBLE)
+        }
+
+        swPW?.setOnCheckedChangeListener { _, isChecked ->
+            //swPW.setChecked(!isChecked)
+            usoAppCliente.isEnabled = (false)
+            usoAppNegocio.isEnabled = (false)
+            val intent = Intent(this, olvido_password :: class.java)
+            startActivity(intent)
         }
 
     }

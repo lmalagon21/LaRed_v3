@@ -16,7 +16,7 @@
             android:visibility="visible"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBaseline_toBaselineOf="@+id/entrar_red_negocio"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintEnd_toEndOf="parent" android:enabled="false"/>
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
             android:ems="10"
             android:id="@+id/movil"
             android:maxLength="10"
-            android:textColor="#009688"
+            android:textColor="#3F51B5"
             android:shadowColor="#F44336" android:gravity="center"
             app:layout_constraintStart_toStartOf="@+id/contraseña"
             android:layout_marginBottom="23dp" app:layout_constraintBottom_toTopOf="@+id/passwd"/>
@@ -61,7 +61,7 @@
             android:ems="10"
             android:id="@+id/contraseña"
             android:maxLength="15"
-            android:textColor="#009688" android:gravity="center"
+            android:textColor="#3F51B5" android:gravity="center"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginBottom="36dp" app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintBottom_toTopOf="@+id/es_negocio"/>
@@ -74,7 +74,7 @@
             android:visibility="visible"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintVertical_bias="0.499"/>
+            app:layout_constraintVertical_bias="0.499" android:enabled="false"/>
     <TextView
             android:text="Donde todas tus compras se convierten en dinero"
             android:layout_width="wrap_content"
@@ -131,6 +131,6 @@
             android:layout_height="wrap_content"
             android:id="@+id/olvido_pwd" android:textColor="#009688"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintBottom_toBottomOf="parent"
-            android:layout_marginBottom="5dp" app:layout_constraintEnd_toEndOf="parent"/>
+            android:layout_marginBottom="5dp" app:layout_constraintEnd_toEndOf="parent" android:checked="false"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
