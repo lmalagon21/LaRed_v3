@@ -71,10 +71,10 @@
             android:layout_height="46dp"
             android:id="@+id/entrar_red_negocio"
             android:background="#FBFBFB" android:textColor="#009688"
-            android:visibility="invisible"
+            android:visibility="visible"
             app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.496"/>
+            app:layout_constraintVertical_bias="0.499"/>
     <TextView
             android:text="Donde todas tus compras se convierten en dinero"
             android:layout_width="wrap_content"
